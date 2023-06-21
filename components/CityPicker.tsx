@@ -10,13 +10,14 @@ import Select from "react-select";
 
   // country types
 
-type option = {
-  value: {
-    latitude: string,
-    longitude: string,
-  };
-  label : string,
-} | null;
+  type option = {
+    value: {
+      latitude: string,
+      longitude: string,
+      isoCode: string,
+    };
+    label : string,
+  } | null;
 
 
   // city type
@@ -49,8 +50,8 @@ function CityPicker() {
 
   // state management
 
-  const [selectCountry, setSelectedCountry] =  useState<option>(null)
-  const [selectCity,  setSelectCity] = useState<cityOption>(null)
+  const [selectCountry, setSelectedCountry] =  useState<option>(null);
+  const [selectCity,  setSelectCity] = useState<cityOption>(null);
   const router = useRouter();
 
   // functions
@@ -62,7 +63,9 @@ function CityPicker() {
 
   const handleCityChange = (option: cityOption) => {
     setSelectCity(option)
-    router.p
+    router.push(
+      `/location/${option?.value.longitude}/${option?.value.latitude}`
+    );
   }
 
   return (
@@ -71,9 +74,11 @@ function CityPicker() {
 
     <div>
 
-    <label className="">Country</label>
+    
 
     {/* country select */}
+
+    <label className="text-white p-5 m-5 font-bold">Country</label>
 
     <Select 
     options={options}
@@ -83,11 +88,34 @@ function CityPicker() {
 
     {/* city select */}
 
-    <Select 
-    // options={}
-    value={selectCity}
-    onChange={handleCityChange}
-    />
+    {selectCountry && (
+      
+      <div>
+              <label className="text-white p-5 m-5 font-bold">City</label>
+              <Select 
+              value={selectCity}
+              onChange={handleCityChange}
+              options={
+                City.getCitiesOfCountry(selectCountry.value.isoCode)?.map(state => ({
+                  value : {
+                    latitude : state.latitude,
+                    longitude : state.longitude,
+                    countryCode : state.countryCode,
+                    name : state.name,
+                    stateCode : state.stateCode,
+                  },
+                  label : state.name,
+                }))
+                
+              }
+              />
+      </div>
+
+       
+
+    )}
+
+    
 
     </div>
 
