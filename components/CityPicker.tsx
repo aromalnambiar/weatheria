@@ -12,11 +12,11 @@ import Select from "react-select";
 
   type option = {
     value: {
-      latitude: string,
-      longitude: string,
-      isoCode: string,
+      latitude: string;
+      longitude: string;
+      isoCode: string;
     };
-    label : string,
+    label : string;
   } | null;
 
 
@@ -25,13 +25,13 @@ import Select from "react-select";
 
   type cityOption = {
     value: {
-      latitude: string,
-      longitude: string,
-      countryCode: string,
-      name: string,
-      stateCode: string,
+      latitude: string;
+      longitude: string;
+      countryCode: string;
+      name: string;
+      stateCode: string;
     };
-    label : string,
+    label : string;
   } | null;
   
 
@@ -64,7 +64,7 @@ function CityPicker() {
   const handleCityChange = (option: cityOption) => {
     setSelectCity(option)
     router.push(
-      `/location/${option?.value.longitude}/${option?.value.latitude}`
+      `/location/${option?.value.name}/${option?.value.latitude}/${option?.value.longitude}`
     );
   }
 
@@ -78,12 +78,13 @@ function CityPicker() {
 
     {/* country select */}
 
-    <label className="text-white p-5 m-5 font-bold">Country</label>
+    <label className="text-white p-5 font-bold ">Country</label>
 
     <Select 
     options={options}
     value={selectCountry}
     onChange={handleCountryChange}
+    className="mt-1 mb-5"
     />
 
     {/* city select */}
@@ -91,8 +92,9 @@ function CityPicker() {
     {selectCountry && (
       
       <div>
-              <label className="text-white p-5 m-5 font-bold">City</label>
+              <label className="text-white p-5 font-bold ">City</label>
               <Select 
+              className="mt-1 mb-1 h-14"
               value={selectCity}
               onChange={handleCityChange}
               options={
