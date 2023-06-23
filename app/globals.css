@@ -5,3 +5,11 @@
 body{
     overflow-y: hidden;
 }
+
+.card-color{
+    background-color: #fff!important;
+}
+
+.bgs-gradient{
+    background: radial-gradient(circle at 10% 20%, rgb(255, 131, 61) 0%, rgb(249, 183, 23) 90%);
+}
