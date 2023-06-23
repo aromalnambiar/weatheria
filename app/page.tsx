@@ -33,7 +33,7 @@ export default function Home() {
         </p>
 
         <p className="text-tremor-content placeholder-opacity-20 text-xs pl-5 pr-5">
-          Powered by - ChatGpt(API), Next.js, Tailwind CSS , Tremor 2.0 , stepZen, open-meteo, etc!
+          Powered by - ChatGpt(API), Next.jsa, Tailwind CSS , Tremor 2.0 , stepZen, open-meteo, etc!
           </p>
 
         <Divider className="my-10 mt-5 opacity-10"/>
