@@ -13,7 +13,7 @@ function StatCard({title, metric, color} : Props) {
   return (
         <Card className="card-color " decorationColor={color} decoration="top" >
             <Text>{title}</Text>
-            <Metric>{metric}</Metric>
+            <Metric className="text-black">{metric}</Metric>
         </Card>
   )
 }

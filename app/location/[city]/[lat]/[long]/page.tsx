@@ -54,7 +54,14 @@ async function MainPage({params : {city ,lat ,long }} : Props ) {
 									warning
 								/>
 							)}
+
+              <div>
+                  <StatCard title="" metric="" />
+                  <StatCard title="" metric="" />
+                  
+              </div>
             </div>
+            
 
         </div>
       </div>  
