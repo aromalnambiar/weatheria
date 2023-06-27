@@ -11,9 +11,9 @@ type Props = {
 
 function StatCard({title, metric, color} : Props) {
   return (
-        <Card className="card-color " decorationColor={color} decoration="top" >
-            <Text>{title}</Text>
-            <Metric className="text-black">{metric}</Metric>
+        <Card className="card-color" decorationColor={color} decoration="top" >
+            <Text className="data-title">{title}</Text>
+            <Metric className="data-subtitle">{metric}</Metric>
         </Card>
   )
 }

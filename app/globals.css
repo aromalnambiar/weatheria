@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 body{
-    overflow-y: hidden;
+    
 }
 
 .card-color{
     background-color: #fff!important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
 }
 
 .bgs-gradient{
@@ -25,4 +26,27 @@ body{
 .dark\:text-dark-tremor-content-emphasis {
     
     color: grey!important;
+}
+
+
+.data-title {
+    font-size: 20px !important;
+    padding: 5px;
+    font-weight: bold !important;
+}
+
+.data-subtitle{
+    padding: 5px !important;
+    color: #000 !important;
+}
+
+.h-for-this{
+    height: 130px;
+}
+
+.wind-img img{
+    top: 0;
+    width: 819px;
+    height: 164px;
+    object-fit: cover;
 }
