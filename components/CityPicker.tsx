@@ -94,7 +94,7 @@ function CityPicker() {
       <div>
               <label className="text-white p-5 font-bold ">City</label>
               <Select 
-              className="mt-1 mb-1 h-14"
+              className="mt-1 mb-1 h-14 "
               value={selectCity}
               onChange={handleCityChange}
               options={

@@ -40,13 +40,13 @@ body{
     color: #000 !important;
 }
 
-.h-for-this{
-    height: 130px;
-}
+/* .h-for-this{
+    height: 200px;
+} */
 
 .wind-img img{
     top: 0;
     width: 819px;
-    height: 164px;
+    height: 175px;
     object-fit: cover;
 }
