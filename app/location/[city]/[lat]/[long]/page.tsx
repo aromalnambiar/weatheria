@@ -92,7 +92,7 @@ async function MainPage({params : {city ,lat ,long }} : Props ) {
 
                   {/* TemChart */}
 
-                    <TempChart />
+                    <TempChart result={results}/>
 
                   {/* RainChart */}
 
