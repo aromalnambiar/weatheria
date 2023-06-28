@@ -142,6 +142,8 @@ async function MainPage({params : {city ,lat ,long }} : Props ) {
                     <HumChart result={results} />
 
                    {/* Gallery */}
+
+                   <hr className="mb-10 mt-5" />
                     
                       <Gallery city={city}/>
 
