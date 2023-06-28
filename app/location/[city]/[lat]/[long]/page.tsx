@@ -96,11 +96,11 @@ async function MainPage({params : {city ,lat ,long }} : Props ) {
 
                   {/* RainChart */}
 
-                    <RainChart />
+                    <RainChart result={results}/>
 
                   {/* HumidityChart */}
 
-                    <HumChart />
+                    <HumChart result={results} />
 
             </div>
             
