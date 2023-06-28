@@ -93,3 +93,18 @@ body{
     height: 24px;
   }
   
+  @media screen and (min-width: 1400px){
+
+    .gallery{
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+      -webkit-column-count: 33%;
+      -moz-column-count: 33%;
+      column-count: 33%;
+    }
+  
+
+  }
+
+  
