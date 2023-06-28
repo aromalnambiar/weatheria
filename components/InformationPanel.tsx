@@ -64,7 +64,7 @@ function InformationPanel({city, lat, long, result} : Props) {
               <p className="text-xl font-bold text-white uppercase">
 
                     {
-                      new Date().toLocaleString("en-GB", {
+                      new Date().toLocaleString("en-IN", {
                       hour: "numeric",
                       minute: "numeric",
                       hour12: true,
@@ -122,7 +122,7 @@ function InformationPanel({city, lat, long, result} : Props) {
                 <p className="uppercase text-2xl font-bold text-white">
                   {new Date(
                     result.daily.sunrise[0]
-                  ).toLocaleTimeString("en-US", {
+                  ).toLocaleTimeString("en-IN", {
                     hour: "numeric",
                     minute: "numeric",
                     hour12: true,
@@ -138,7 +138,7 @@ function InformationPanel({city, lat, long, result} : Props) {
                 <p className="uppercase text-2xl font-bold text-white">
                   {new Date(
                     result.daily.sunset[0]
-                  ).toLocaleTimeString("en-US", {
+                  ).toLocaleTimeString("en-IN", {
                     hour: "numeric",
                     minute: "numeric",
                     hour12: true,

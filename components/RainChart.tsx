@@ -10,7 +10,7 @@ function RainChart({result} : Props) {
 
         const hourly = result?.hourly.time
                     .map((time) =>
-                        new Date(time).toLocaleString("en-US", {
+                        new Date(time).toLocaleString("en-IN", {
                             hour: "numeric",
                             hour12: false,
                         })
@@ -22,7 +22,7 @@ function RainChart({result} : Props) {
                     "Rain (%)" :result.hourly.precipitation_probability[i],
                 }));
 
-                const dataFormatter = (number: number) => `${number}`;
+                const dataFormatter = (number: number) => `${number}%`;
 
                 return (
                     <Card className='card-color lg:-ml-5'>

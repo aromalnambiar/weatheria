@@ -10,7 +10,7 @@ function HumChart({result} : Props) {
 
         const hourly = result?.hourly.time
                     .map((time) =>
-                        new Date(time).toLocaleString("en-US", {
+                        new Date(time).toLocaleString("en-IN", {
                             hour: "numeric",
                             hour12: false,
                         })
@@ -19,21 +19,21 @@ function HumChart({result} : Props) {
 
                 const data = hourly.map((hour, i) => ({
                     time: Number(hour),
-                    "Rain (%)" :result.hourly.precipitation_probability[i],
+                    "Humidity (%)" :result.hourly.relativehumidity_2m[i],
                 }));
 
-                const dataFormatter = (number: number) => `${number}`;
+                const dataFormatter = (number: number) => `${number}%`;
 
                 return (
                     <Card className='card-color lg:-ml-5 mt-5'>
-                        <Title>Change of Rain</Title>
+                        <Title>Humidity Levels</Title>
                         <AreaChart
                             className="mt-6"
                             data={data}
                             showLegend
                             index="time"
-                            categories={["Rain (%)"]}
-                            colors={["blue"]}
+                            categories={["Humidity (%)"]}
+                            colors={["teal"]}
                             minValue={0}
                             maxValue={100}
                             valueFormatter={dataFormatter}
