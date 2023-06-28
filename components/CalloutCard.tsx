@@ -5,7 +5,7 @@ import { CheckCircleIcon, ExclamationIcon } from "@heroicons/react/solid"
  
 type Props = {
     message : string;
-    warning? : string;
+    warning? : boolean;
 }
 
 function CalloutCard({message, warning} : Props) {
