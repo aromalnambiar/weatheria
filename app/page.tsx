@@ -22,7 +22,7 @@ export default function Home() {
       <div className="shadow bg-white p-2 rounded-2xl absolute top-0 md:bottom-28 bottom-0 left-0 right-0
       flex justify-center items-center flex-col m-auto max-h-fit max-w-fit max-sm:m-5 max-sm:mt-auto max-sm:mb-auto">
 
-        <p className="font-bold  text-center p-10 md:p-5 text-6xl md:text-5xl sm:text-2xl text-amber-500" >
+        <p className="font-bold  text-center p-10 md:p-5 text-6xl md:text-5xl max-sm:text-4xl text-amber-500" >
           <Typewriter
               options={{
                 strings: ['Weatheria'],
