@@ -100,8 +100,8 @@ function CityPicker() {
               options={
                 City.getCitiesOfCountry(selectCountry.value.isoCode)?.map(state => ({
                   value : {
-                    latitude : state.latitude,
-                    longitude : state.longitude,
+                    latitude: state.latitude || "", // Provide a default value for latitude
+                    longitude: state.longitude || "", // Provide a default value for longitude
                     countryCode : state.countryCode,
                     name : state.name,
                     stateCode : state.stateCode,
