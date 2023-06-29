@@ -8,9 +8,17 @@ type Props = {
     city: string;
 };
 
+interface Photo {
+  urls: {
+    raw: string;
+    // Add other url properties if needed
+  };
+  // Add other properties if needed
+}
+
 function Gallery({city} : Props ) {
 
-    const [photo, setPhoto] = useState([])
+    const [photo, setPhoto] = useState<Photo[]>([]);
     const [number, setNumber] = useState(15)
     const [isLoading, setIsLoading] = useState(true);
 
