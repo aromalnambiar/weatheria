@@ -9,6 +9,7 @@ import RainChart from "@/components/RainChart";
 import StatCard from "@/components/StatCard";
 import TempChart from "@/components/TempChart";
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQuery";
+import Image from "next/image";
 import { global } from "styled-jsx/css";
 // import cleanData from "@/lib/cleanData";
 // import getBasePath from "@/lib/getBasePath";

@@ -3,6 +3,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import Typewriter from "typewriter-effect";
+import Image from "next/image";
 
 type Props = {
     city: string;
